@@ -12,6 +12,42 @@
     margin: 0 auto;
 }
 
+.cbtn {
+    display: inline-block;
+    padding: 15px 25px;
+    border: 1px solid var(--mc);
+    color: var(--mc);
+    font-size: 13px;
+    background: #ffffff;
+}
+
+.cbtn::after {
+    content: "\e93e";
+    font-family: xeicon;
+    display: inline-block;
+    margin: 0 0 0 10px;
+    font-size: 10px;
+    vertical-align: 1px;
+}
+
+.csc {
+    position: relative;
+    padding: 100px 0;
+}
+
+.csc h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+.csc p {
+    font-size: 15px;
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+
 .TopBanner {
     background: var(--mc);
     color: var(--lc);
@@ -47,7 +83,7 @@
 }
 
 .Header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -223,14 +259,14 @@
 
 .MainVisual {
     position: relative;
-    padding: 155px 0 0 0;
     color: var(--lc);
+    transform: translateY(-100px);
+    height: calc(100vh - 255px);
 }
 
 .MainVisual figure {
-    width: calc(100vh - 155px);
+    height: calc(100vh - 155px);
     position: relative;
-    height: 700px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 150% auto;
@@ -258,6 +294,21 @@
     transform: translate(-50%, -50%);
 }
 
+.MainVisual .tit {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    text-shadow: 0 0 2px var(--dc);
+    white-space: pre-wrap;
+}
+
+.MainVisual .des {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+    text-shadow: 0 0 1px var(--dc);
+}
+
 .MainVisual .slick-track,
 .MainVisual .slick-slide {
     transition-duration: 5ms;
@@ -276,6 +327,30 @@
     left: 50%;
     transform: translate(-100%, -50%);
     margin: 0 0 0 600px;
+}
+
+.MainVisual .slideTab li {
+    text-align: right;
+    margin: 10px 0 10px 0;
+    font-size: 0;
+}
+
+.MainVisual .slideTab li.on {
+    font-size: 15px;
+}
+
+.MainVisual .slideTab li::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--lc);
+    margin: 0 0 0 15px;
+    vertical-align: middle;
+}
+
+.MainVisual .slideTab li.on::after {
+    background: var(--lc);
 }
 
 .MainVisual .slideArrows button {
@@ -298,4 +373,131 @@
 
 .MainVisual .slideArrows button:last-child {
     margin: 0 0 0 700px;
+}
+
+.MainComtent .inner {
+    display: flex;
+}
+
+.MainComtent figure {
+    flex: 1;
+    text-align: center;
+}
+
+.MainComtent figure img {
+    transition: 0.5s;
+}
+
+.MainComtent figure:hover img {
+    transform: scale(1.2);
+}
+
+.MainComtent .box {
+    margin: 0 0 40px 0;
+    overflow: hidden;
+}
+
+.MainComtent .tit {
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+}
+
+.MainComtent .tit::after {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: calc(50% - 1px);
+    width: 2px;
+    height: 40px;
+    background: var(--mc);
+}
+
+.MainComtent .dec {
+    word-break: keep-all;
+    font-size: 15px;
+    margin: 0 0 30px 0;
+    display: inline-block;
+    width: 70%;
+    min-height: 50px;
+    line-height: 1.45;
+}
+
+.Portfolio {
+    background: url(../public/assets/images/section1_bg.jpg) repeat-x;
+}
+
+.Portfolio h2 {
+    padding: 40px 0 0 0;
+    color: var(--lc);
+    text-align: left;
+}
+
+.Portfolio p {
+    color: var(--lc);
+    text-align: left;
+}
+
+.Portfolio .arrows {
+    align-self: flex-start;
+    border: 1px solid var(--lc);
+    color: var(--lc);
+    font-size: 0;
+}
+
+.Portfolio .arrows i {
+    padding: 10px;
+    font-size: 30px;
+}
+
+.Portfolio .arrows i ~ i {
+    border-left: 1px solid var(--lc);
+}
+
+.Portfolio .container {
+    display: flex;
+    width: calc(1200px + (100% - 1200px) / 2);
+    margin: 0 0 0 auto;
+}
+
+.Portfolio .container > div {
+    min-width: 0;
+}
+
+.Portfolio .container .left {
+    width: 450px;
+}
+
+.Portfolio .container .right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.Portfolio .right_slide figure {
+    padding: 0 20px 0 0;
+}
+
+.Portfolio .right .slide {
+    overflow: hidden;
+    margin: auto 0 0 0;
+}
+
+.Portfolio .right_slide {
+    width: 1300px;
+}
+
+.Portfolio .box {
+    margin: 0 0 30px 0;
+}
+
+.Portfolio .des {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.Portfolio .left .box {
+    width: 400px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
