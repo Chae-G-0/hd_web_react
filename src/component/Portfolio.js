@@ -34,7 +34,7 @@ const Portfolio = () => {
                         <Slider fade={true} ref={LS} asNavFor={RS.current} arrows={false}>
                             {PTF.map((bd) => {
                                 return (
-                                    <figure>
+                                    <figure key={bd.id}>
                                         <div className="box">
                                             <img src={process.env.PUBLIC_URL + "/assets/images/main_m0" + bd.id + ".jpg"} alt="" />
                                         </div>
@@ -56,7 +56,7 @@ const Portfolio = () => {
                         <Slider slidesToShow={5} className="right_slide" ref={RS} asNavFor={LS.current} arrows={false}>
                             {PTF.map((bd) => {
                                 return (
-                                    <figure>
+                                    <figure  key={bd.id}>
                                         <div className="box">
                                             <img src={process.env.PUBLIC_URL + "/assets/images/main_m0" + bd.id + ".jpg"} alt="" />
                                         </div>
