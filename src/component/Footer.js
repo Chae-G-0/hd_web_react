@@ -19,7 +19,10 @@ const Footer = () => {
             </div>
             <div className="ft_bottom">
                 <div className="inner">
-                    <address className="left"></address>
+                    <div className="left">
+                        <address>충청북도 충주시</address>
+                        <span>asadsf</span>
+                    </div>
                     <div className="right">
                         <FamilyLink/>
                     </div>

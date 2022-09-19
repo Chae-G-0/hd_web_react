@@ -14,6 +14,8 @@ const PTF = [
     { id: 9, title: "Metropol Istanbul" },
 ];
 
+const NPTF = [...PTF, PTF[0]].slice(1, PTF.lenght);
+
 const Portfolio = () => {
     const LS = useRef(null);
     const RS = useRef(null);
@@ -54,9 +56,9 @@ const Portfolio = () => {
                     </div>
                     <div className="slide">
                         <Slider slidesToShow={5} className="right_slide" ref={RS} asNavFor={LS.current} arrows={false}>
-                            {PTF.map((bd) => {
+                            {NPTF.map((bd) => {
                                 return (
-                                    <figure  key={bd.id}>
+                                    <figure key={bd.id}>
                                         <div className="box">
                                             <img src={process.env.PUBLIC_URL + "/assets/images/main_m0" + bd.id + ".jpg"} alt="" />
                                         </div>
